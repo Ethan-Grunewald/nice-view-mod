@@ -27,6 +27,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/wpm.h>
 
 LV_IMG_DECLARE(Dewey_Sitting);
+LV_IMG_DECLARE(Lorelai_Sitting);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -320,7 +321,8 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_t *art = lv_img_create(widget->obj);
     //bool random = sys_rand32_get() & 1;
     //lv_img_set_src(art, random ? &balloon : &mountain);
-    lv_img_set_src(art, &Dewey_Sitting);
+    //lv_img_set_src(art, &Dewey_Sitting);
+    lv_img_set_src(art, &Lorelai_Sitting);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
     sys_slist_append(&widgets, &widget->node);
@@ -333,6 +335,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 }
 
 lv_obj_t *zmk_widget_status_obj(struct zmk_widget_status *widget) { return widget->obj; }
+
 
 
 

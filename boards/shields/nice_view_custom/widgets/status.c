@@ -27,7 +27,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/wpm.h>
 
 LV_IMG_DECLARE(Dewey_Sitting);
-LV_IMG_DECLARE(Lorelai_Sitting);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -175,3 +174,4 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 }
 
 lv_obj_t *zmk_widget_status_obj(struct zmk_widget_status *widget) { return widget->obj; }
+

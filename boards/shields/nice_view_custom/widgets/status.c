@@ -17,6 +17,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/event_manager.h>
 #include <zmk/events/battery_state_changed.h>
 #include <zmk/events/ble_active_profile_changed.h>
+#include <zmk/split/bluetooth/peripheral.h>
 #include <zmk/events/endpoint_changed.h>
 #include <zmk/events/wpm_state_changed.h>
 #include <zmk/events/layer_state_changed.h>
@@ -335,6 +336,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 }
 
 lv_obj_t *zmk_widget_status_obj(struct zmk_widget_status *widget) { return widget->obj; }
+
 
 
 
